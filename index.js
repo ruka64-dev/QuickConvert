@@ -4,10 +4,18 @@ import { lstat, readdir, stat } from 'fs/promises';
 import { existsSync, mkdirSync } from 'fs';
 import { parse, join, isAbsolute } from 'path';
 
+//* Define __dirname
 const __dirname = import.meta.dirname;
 
+//* Extensions
 const ExtArr = ['bmp', 'ico', 'jpg', 'svg', 'tif', 'webp', 'png'];
 
+let repeat = 0;
+
+/**
+ * mkdir (If not exists)
+ * @param {string} path
+ */
 export function mkdirIfnotExists(path) {
 	console.log(path);
 	try {
@@ -51,8 +59,9 @@ function Convert(path, ext) {
 	});
 }
 
-let repeat = 0;
-
+/**
+ * main function
+ */
 async function main() {
 	const pathstr = await consola.prompt('Enter the target folder (absolute path):', {
 		type: 'text',
@@ -114,7 +123,6 @@ async function main() {
 }
 
 function kill() {
-	console.log('BYE');
 	process.exit(0);
 }
 
