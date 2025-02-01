@@ -1,0 +1,21 @@
+{
+	"name": "quick-convert",
+	"version": "1.0.0",
+	"description": "An simple file converter with Node.js and FFmpeg",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"type": "module",
+	"keywords": [],
+	"author": "ruka64-dev",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^22.13.0"
+	},
+	"dependencies": {
+		"consola": "^3.4.0",
+		"picocolors": "^1.1.1"
+	}
+}
