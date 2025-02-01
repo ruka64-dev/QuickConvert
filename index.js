@@ -110,7 +110,7 @@ async function main() {
 			}
 		})
 	);
-	consola.success(failed !== 0 ? `Successfully converted ${success} files` : `Successfully converted ${success}/${all} files (${failed} files failed to convert! please check the error log.)`);
+	consola.success(failed == 0 ? `Successfully converted ${success} files` : `Successfully converted ${success}/${all} files (${failed} files failed to convert! please check the error log.)`);
 }
 
 function kill() {
